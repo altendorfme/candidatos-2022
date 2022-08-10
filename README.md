@@ -17,9 +17,9 @@ Dados abertos dos candidatos as Eleicões de 2022 conforme divulgado pelo TSE
 
 ## CDN:
 
-- https://cdn.jsdelivr.net/gh/altendorfme/candidatos-2022/2022/csv/**{ufs}**.csv
-- https://cdn.jsdelivr.net/gh/altendorfme/candidatos-2022/2022/json/**{ufs}**.json
-- https://cdn.jsdelivr.net/gh/altendorfme/candidatos-2022/2022/imagens/**{SQ_CANDIDATO}**.jpg
+- https://cdn.jsdelivr.net/gh/altendorfme/candidatos-2022/2022/csv/sp.csv (uf + br)
+- https://cdn.jsdelivr.net/gh/altendorfme/candidatos-2022/2022/json/sp.json (uf + br)
+- https://cdn.jsdelivr.net/gh/altendorfme/candidatos-2022/2022/imagens/280001607829.jpg (SQ_CANDIDATO)
 
 ## Informações adicionais:
 
