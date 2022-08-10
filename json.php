@@ -84,14 +84,14 @@ if ($dados_abertos === FALSE) {
 				unlink(ANO . '/csv/'. $uf . '.csv');
 
 				$candidatos = ANO . '/csv/consulta_cand_' . ANO . '_' . strtoupper($uf) . '.csv';
-				rename($dados, ANO . '/csv/'. $uf . '.csv');
+				rename($candidatos, ANO . '/csv/'. $uf . '.csv');
 				$candidatos = ANO . '/csv/'. $uf . '.csv';
 				if (file_exists($candidatos)) {
 					$candidatos = mb_convert_encoding(file_get_contents($candidatos), 'UTF-8', 'US-ASCII');
 					$csv = new \ParseCsv\Csv();
 					$csv->auto($candidatos);
 
-					$json = json_encode($csv->data, JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT);
+					$json = json_encode($csv->data, JSON_UNESCAPED_UNICODE);
 					file_put_contents(ANO . '/json/' . $uf . '.json', $json);
 				} else {
 					echo 'Erro ao processar CSV de ' . strtoupper($uf) . PHP_EOL;
