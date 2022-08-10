@@ -15,7 +15,13 @@ Dados abertos dos candidatos as Eleicões de 2022 conforme divulgado pelo TSE
 - **json.php**: Baixa todos os CSV's e faz a conversão para JSON
 - **imagens.php**: Baixa todas as imagens dos candidatos
 
-## CDN:
+## Github:
+
+- https://raw.githubusercontent.com/altendorfme/candidatos-2022/main/csv/sp.csv (uf + br)
+- https://raw.githubusercontent.com/altendorfme/candidatos-2022/main/json/sp.json (uf + br)
+- https://raw.githubusercontent.com/altendorfme/candidatos-2022/main/imagens/280001607829.jpg (SQ_CANDIDATO)
+
+## jsDelivr (Cache de 1 semana):
 
 - https://cdn.jsdelivr.net/gh/altendorfme/candidatos-2022/2022/csv/sp.csv (uf + br)
 - https://cdn.jsdelivr.net/gh/altendorfme/candidatos-2022/2022/json/sp.json (uf + br)
