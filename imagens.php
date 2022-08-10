@@ -26,7 +26,8 @@ foreach (ESTADOS as $uf => $state) {
 
 		echo $codigo_candidato . PHP_EOL;
 
-		if(file_exists(ANO . '/imagens/' . $codigo_candidato . '.jpg')) {
+		$nome_arquivo = ANO . '/imagens/' . $codigo_candidato . '.jpg';
+		if(file_exists($nome_arquivo)) {
 			echo '- Arquivo encontrado!' . PHP_EOL;
 		} else {
 			echo '- Arquivo não encontrado!' . PHP_EOL;
@@ -78,7 +79,11 @@ foreach (ESTADOS as $uf => $state) {
 				$image = curl_exec($curl);
 				curl_close($curl);
 
-				file_put_contents(ANO . '/imagens/' . $codigo_candidato . '.jpg', $image);
+				file_put_contents($nome_arquivo, $image);
+
+				if(filesize($nome_arquivo) < 3000) {
+					unlink($nome_arquivo);
+				}
 			}
 		}
 	}
