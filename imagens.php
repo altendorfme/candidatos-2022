@@ -17,6 +17,25 @@ if (is_dir(ANO . '/imagens') === false) {
 	mkdir(ANO . '/imagens');
 }
 
+function limpar($nome_arquivo) {
+	if(
+		// https://emn178.github.io/online-tools/md5_checksum.html
+		md5_file($nome_arquivo) == 'f50dce5d01610d5ee51aa736d4dff46f' ||
+		md5_file($nome_arquivo) == '28e01b8dba1019f9a8a0c85fb967d102' ||
+		md5_file($nome_arquivo) == '34f6b6cbd0b4991aaa07d1d52c1d5834' ||
+		md5_file($nome_arquivo) == '864f90a0b417c1363262f5a8f0bd6ec5' ||
+		md5_file($nome_arquivo) == '70ab47dc4d13018cef519dfc5c582264' ||
+		md5_file($nome_arquivo) == '3441510c9003be7a1451794e1342b099' ||
+		md5_file($nome_arquivo) == 'fb7cf9ee9a248f905e5c64a238daa404' ||
+		md5_file($nome_arquivo) == 'e335586ab6e8901c7137351a6185a0b4' ||
+		md5_file($nome_arquivo) == 'b47b3ba687fc873f25a90261a292a40c' ||
+		md5_file($nome_arquivo) == '7bf0b7c9a09121f6c3bdb5e074cff2a5' ||
+		md5_file($nome_arquivo) == '44647f23181bf72fa96a4774c09e4c10'
+	) {
+		unlink($nome_arquivo);
+	}
+}
+
 foreach (ESTADOS as $uf => $state) {
 	echo 'UF: ' . strtoupper($uf) . PHP_EOL;
 
@@ -29,6 +48,7 @@ foreach (ESTADOS as $uf => $state) {
 		$nome_arquivo = ANO . '/imagens/' . $codigo_candidato . '.jpg';
 		if(file_exists($nome_arquivo)) {
 			echo '- Arquivo encontrado!' . PHP_EOL;
+			limpar($nome_arquivo);
 		} else {
 			echo '- Arquivo não encontrado!' . PHP_EOL;
 			$stream_context_create = array(
@@ -86,19 +106,7 @@ foreach (ESTADOS as $uf => $state) {
 					unlink($nome_arquivo);
 				} else {
 					// Remove imagens aleatorias
-					if(
-						md5_file($nome_arquivo) == 'f50dce5d01610d5ee51aa736d4dff46f' ||
-						md5_file($nome_arquivo) == '28e01b8dba1019f9a8a0c85fb967d102' ||
-						md5_file($nome_arquivo) == '34f6b6cbd0b4991aaa07d1d52c1d5834' ||
-						md5_file($nome_arquivo) == '864f90a0b417c1363262f5a8f0bd6ec5' ||
-						md5_file($nome_arquivo) == '70ab47dc4d13018cef519dfc5c582264' ||
-						md5_file($nome_arquivo) == '3441510c9003be7a1451794e1342b099' ||
-						md5_file($nome_arquivo) == 'fb7cf9ee9a248f905e5c64a238daa404' ||
-						md5_file($nome_arquivo) == 'e335586ab6e8901c7137351a6185a0b4' ||
-						md5_file($nome_arquivo) == 'b47b3ba687fc873f25a90261a292a40c' 
-					) {
-						unlink($nome_arquivo);
-					}
+					limpar($nome_arquivo);
 				}
 			}
 		}
