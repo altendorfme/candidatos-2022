@@ -1,6 +1,8 @@
 name: 🚀 Atualizar dados do TSE (Imagens)
 
-on: [workflow_dispatch]
+on:
+  schedule:
+    - cron: "30 0 * * 0"
 
 jobs:
 
