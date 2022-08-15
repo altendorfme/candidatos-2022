@@ -30,4 +30,4 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: "🤖 Dados atualizados"
-        file_pattern: dados/2022/json/*.json dados/2022/csv/*.csv
+        file_pattern: 2022/json/*.json 2022/csv/*.csv

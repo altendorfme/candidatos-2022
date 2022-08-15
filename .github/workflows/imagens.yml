@@ -27,4 +27,4 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: "🤖 Dados atualizados"
-        file_pattern: dados/2022/imagens/*.jpg
+        file_pattern: 2022/imagens/*.jpg
