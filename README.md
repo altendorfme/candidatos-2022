@@ -29,8 +29,8 @@ Dados abertos dos candidatos as Eleicões de 2022 conforme divulgado pelo TSE
 
 ## Informações adicionais:
 
-Os dados serão processados semanalmente, como o TSE bloqueia o acesso para IPs de fora do Brasil não foi possivel automatizar esse processo via Github Actions e tambem não irei tentar utilizar um proxy para contornar.
+Os dados serão processados diariamente via Github Action.
 
 O TSE fornece diversas rotas que trazem essas mesmas informações em tempo real, inclusive é utilizado no **imagens.php** para pegar a foto do candidato. Você pode consultar mais informações e documentações em https://dadosabertos.tse.jus.br/ ou https://divulgacandcontas.tse.jus.br.
 
-Os limites de consulta no TSE são muito altos, mas ficam lentos e podem cair principalmente no dia da eleição. Além do bloqueio para IPs de fora do Brasil.
+Os limites de consulta no TSE são muito altos, mas ficam lentos e podem cair principalmente no dia da eleição.
