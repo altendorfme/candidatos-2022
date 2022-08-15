@@ -1,8 +1,6 @@
 name: 🚀 Atualizar dados do TSE (JSON)
 
-on:
-  schedule:
-    - cron: "0 0 * * 0"
+on: [workflow_dispatch]
 
 jobs:
 
