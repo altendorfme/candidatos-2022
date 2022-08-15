@@ -1,0 +1,33 @@
+name: 🚀 Atualizar dados do TSE (JSON)
+
+on:
+  schedule:
+    - cron: "0 0 * * 0"
+
+jobs:
+
+  build:
+    name: 🖥️ Iniciando Ubuntu na ultima versão
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 🚚 Baixar a ultima versão
+      uses: actions/checkout@v3
+
+    - name: 🐘 Configurar PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'
+        extensions: zip
+
+    - name: 📦 Instalando dependencias
+      run: composer install --prefer-dist --no-progress
+
+    - name: 🔽 Baixar dados
+      run: php json.php
+
+    - name: 💾 Enviar mudanças
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: "🤖 Dados atualizados"
+        file_pattern: dados/2022/json/*.json dados/2022/csv/*.csv
