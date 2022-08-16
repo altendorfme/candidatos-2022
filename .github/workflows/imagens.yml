@@ -2,7 +2,7 @@ name: 🚀 Atualizar dados do TSE (Imagens)
 
 on:
   schedule:
-    - cron: "30 0 * * 0"
+    - cron: "30 3 * * 0"
 
 jobs:
 
