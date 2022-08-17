@@ -29,7 +29,7 @@ Dados abertos dos candidatos as Eleicões de 2022 conforme divulgado pelo TSE
 
 ## Informações adicionais:
 
-Os dados serão processados diariamente via Github Action.
+Os dados dos candidatos serão processados diariamente e as imagens semanalmente via Github Action.
 
 O TSE fornece diversas rotas que trazem essas mesmas informações em tempo real, inclusive é utilizado no **imagens.php** para pegar a foto do candidato. Você pode consultar mais informações e documentações em https://dadosabertos.tse.jus.br/ ou https://divulgacandcontas.tse.jus.br.
 
